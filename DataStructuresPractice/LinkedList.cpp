@@ -67,3 +67,16 @@ void LinkedList::DisplayList()
 		temp = temp->next;
 	}
 }
+
+void LinkedList::InsertNode(int value)
+{
+	/****
+	 * Initialize a new node and pass the value of the parameter to it then set next 
+	 * equal to the current head before setting the new pointer to be the head
+	 ****/
+	Node *n = new Node();
+	n->data = value;
+	n->next = head;
+
+	head = n;
+}
